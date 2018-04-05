@@ -45,7 +45,7 @@ namespace PetsConsoleApp
                 }
                 catch (Exception exception)
                 {
-                    Console.WriteLine($"Error: ", exception);
+                    Console.WriteLine($"Error:  {exception}");
                 }
 
                 Console.ReadLine();

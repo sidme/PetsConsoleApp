@@ -19,7 +19,7 @@ namespace PetsConsoleApp.Tests
         /// Test can than be modified to expect an exception.
         /// </summary>
         [TestMethod]
-        public void PetOwnerService_Url_Is_Valid()
+        public void GetPetOwners_IsApiUrlValid_ExceptionThrownIfNot()
         {
             //Arrange
             PetOwnerService petOwnerService = new PetOwnerService();
@@ -47,7 +47,7 @@ namespace PetsConsoleApp.Tests
         /// Expected Output: Test passes of data or empy array is returned. Fails if null is returned.
         /// </summary>
         [TestMethod]
-        public void PetOwnerService_ReturnValue_Is_Not_Null()
+        public void GetPetOwners_ReturnNotNull_Pass()
         {
             //Arrange
             PetOwnerService petOwnerService = new PetOwnerService();
@@ -60,47 +60,7 @@ namespace PetsConsoleApp.Tests
 
         }
 
-     
-        /// <summary>
-        /// Test Case 3: Count list of pet owners returned by PetOwerService
-        /// Expected Output: Test succeeds if 6 pet owners are returned.
-        /// </summary>
-        [TestMethod]
-        public void PetOwnerService_Count_PetOwners()
-        {
-            //Arrange
-            PetOwnerService petOwnerService = new PetOwnerService();
-
-            //Act
-            var result = petOwnerService.GetPetOwners();
-
-            //Assert
-            Assert.AreEqual(result.Count, 6);
-        }
-
-        /// <summary>
-        /// Test Case 4: Test to see any exception is thrown by abstract class.
-        /// Expected Output: If Exception is thrown, test fails.
-        /// Additional Comments: A better approach is to test for specific exceptions like TimeoutException, JsonSerialisationException etc.
-        /// </summary>
-        [TestMethod]
-        public void ApiClient_Any_Exception_Thrown()
-        {
-            //Arrange
-            PetOwnerService petOwnerService = new PetOwnerService();
-
-            //Act
-            try
-            {
-                var result = petOwnerService.GetPetOwners();
-            }
-            catch (Exception exception)
-            {
-                //Assert
-                Assert.IsTrue(exception != null);
-            }
-        }
-
+        
     }
 
 

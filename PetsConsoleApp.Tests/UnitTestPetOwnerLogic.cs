@@ -33,7 +33,7 @@ namespace PetsConsoleApp.Tests
         /// Expected Output: Null;
         /// </summary>
         [TestMethod]
-        public void PetOwnerLogic_NoDataReceived()
+        public void GetCatsByOwnerGender_NullReceived_Pass()
         {
             //Arrange - Initialised
             petOwnerServiceMock.Expect(x => x.GetPetOwners()).Return(null);
@@ -50,7 +50,7 @@ namespace PetsConsoleApp.Tests
         /// Expected Output: Empty array
         /// </summary>
         [TestMethod]
-        public void PetOwnerLogic_EmptyListReceived()
+        public void GetCatsByOwnerGender_EmptyListReceived_Pass()
         {
             //Arrange - Initialised
             petOwnerServiceMock.Expect(x => x.GetPetOwners()).Return(new List<PetOwner>());
@@ -67,7 +67,7 @@ namespace PetsConsoleApp.Tests
         /// Expected Output: no male pet owner in list
         /// </summary>
         [TestMethod]
-        public void PetOwnerLogic_Returns_No_Male_Owner()
+        public void GetCatsByOwnerGender_No_Male_Owner_Pass()
         {
             //Arrange - Initialised
             petOwnerServiceMock.Expect(x => x.GetPetOwners()).Return(new List<PetOwner>

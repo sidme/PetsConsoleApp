@@ -31,11 +31,31 @@ Projects Summary
 2. PetsConsoleApp.Tests - contains all units test for PetsConsoleApp main project.
 
 
+Solution Structure
+------------------
+Below defines how application code is structured and interacts with various layers.
+
+External API -> API Layer -> Business Logic Layer -> Client/Console Application
+
+
 Design Considerations
 ---------------------
 1. Classes in main project are organised using folders. In bigger projects, these folders could represent separate class library projects.
 2. Unit tests do not cover all possible scenarios.
 3. Used AutoFac as IoC container.
+4. ApiClient.cs is abstract class containing code to interact with API. 
+5. PetOwnerService - API Layer
+    1. Implements IPetOwnerService interface to get data from API.
+    2. Inherits from ApiClient abstract class.
+6. PetOwnerLogic - Business Logic Layer
+    1. Implements IPetOwnerLogic interfade to get data from Service layer.
+    2. Responsible to transfor input (from PetOwnerService) into object required by Program.Main() consumer.
+7. Program - Client/Consumer/UI
+    1. Registers IOC Container
+    2. Interacts with Business Logic Layer to get data
+    3. Checks for null or empty list.
+    4. Displays output in console window.
+
 
 
 

@@ -1,6 +1,6 @@
 Pets Console App
 ----------------
-Version: 0.0.1
+Version: 0.1.0
 
 Pets console app is a C# console application to demonstrate consuming an external API, producing list of pet names sorted alphabetically and grouped by pet's owner's gender.
 
@@ -15,7 +15,7 @@ To get started with this application you will need:
     https://www.visualstudio.com/downloads/
 
 
-Following are instructions to get started with this applicaction:
+Following are instructions to get started with this application:
 
 1. Download or clone Github repo.
 2. Open solution from local repo by double clicking PetsConsoleApp.sln file. This will open solution in Visual Studio. Solution has two projects (See Project Summary below).
@@ -27,7 +27,7 @@ Following are instructions to get started with this applicaction:
 Projects Summary
 ----------------
 
-1. PetsConsoleApp - is the main application project. Contains console app entry point, all business logic and data access components.
+1. PetsConsoleApp - is the main application project. Contains C# console app entry point, all business logic and data access components.
 2. PetsConsoleApp.Tests - contains all units test for PetsConsoleApp main project.
 
 
@@ -35,6 +35,7 @@ Design Considerations
 ---------------------
 1. Classes in main project are organised using folders. In bigger projects, these folders could represent separate class library projects.
 2. Unit tests do not cover all possible scenarios.
+3. Used AutoFac as IoC container.
 
 
 

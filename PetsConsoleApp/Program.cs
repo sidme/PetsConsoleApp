@@ -8,7 +8,7 @@ namespace PetsConsoleApp
         {
             //Configuration application
             Startup.ConfigureApplication();
-            
+
         }
     }
 }

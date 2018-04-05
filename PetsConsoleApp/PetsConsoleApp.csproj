@@ -56,6 +56,8 @@
     <Compile Include="API\ApiClient.cs" />
     <Compile Include="API\ApiImplementation\PetOwnerService.cs" />
     <Compile Include="API\ApiInterface\IPetOwnerConsumer.cs" />
+    <Compile Include="BusinessLogic\LogicImplementation\PetOwnerLogic.cs" />
+    <Compile Include="BusinessLogic\LogicInterface\IPetOwnerLogic.cs" />
     <Compile Include="Config\Startup.cs" />
     <Compile Include="DTO\Pet.cs" />
     <Compile Include="DTO\PetOwner.cs" />
@@ -68,5 +70,6 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -18,7 +18,7 @@ To get started with this application you will need:
 Following are instructions to get started with this applicaction:
 
 1. Download or clone Github repo.
-2. Open solution from local repo by double clicking PetsConsoleApp.sln file. This will open solution in Visual Studio.
+2. Open solution from local repo by double clicking PetsConsoleApp.sln file. This will open solution in Visual Studio. Solution has two projects (See Project Summary below).
 3. Build solution - this ensure all necessary NuGet packages are downloaded and that there are no errors.
 4. Run application in Visual Studio by pressing Ctrl+F5
 
@@ -33,18 +33,17 @@ Projects Summary
 
 Design Considerations
 ---------------------
-WIP
+1. Classes in main project are organised using folders. In bigger projects, these folders could represent separate class library projects.
+2. Unit tests do not cover all possible scenarios.
 
 
-Assumptions
------------
-WIP
 
 NuGet Packages
 ---------------------------------
 
 1. AutoFac (Ver - 4.6.2)- is an IOC container. Manages Dependency Injection for the project.
 2. Newtonsoft.Json (Ver - 11.0.2) - To serialise/deserialise JSON payload.
+3. RhinoMocks (Ver - 3.6.1) - For unit testing
 
 
 Feedback

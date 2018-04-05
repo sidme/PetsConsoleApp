@@ -16,22 +16,26 @@ namespace PetsConsoleApp.API
         /// <typeparam name="T"></typeparam>
         /// <param name="path"></param>
         /// <returns>Payload of type T or Exception</returns>
-        protected T Get<T>(string path) where T : class
+        public virtual T Get<T>(string path) where T : class
         {
             try
             {
                 T result = null;
                 using (var client = new HttpClient())
                 {
-                    client.GetAsync(path).ContinueWith((task) =>
-                    {
-                        var response = task.Result;
-                        var jsonString = response.Content.ReadAsStringAsync();
-                        jsonString.Wait();
-                        result = JsonConvert.DeserializeObject<T>(jsonString.Result);
-
-                    }).Wait();
+                    
+                        client.GetAsync(path).ContinueWith((task) =>
+                        {
+                            var response = task.Result;
+                            var jsonString = response.Content.ReadAsStringAsync();
+                            jsonString.Wait();
+                            result = JsonConvert.DeserializeObject<T>(jsonString.Result);
+                           
+                            
+                        }).Wait();
+                    
                     return result;
+
                 }
             }
             catch (Exception ex)

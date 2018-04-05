@@ -59,6 +59,7 @@
       <HintPath>..\packages\System.ComponentModel.TypeConverter.4.3.0\lib\net45\System.ComponentModel.TypeConverter.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -69,6 +70,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UnitTestApiClient.cs" />
     <Compile Include="UnitTestPetOwnerLogic.cs" />
     <Compile Include="UnitTestPetOwnerService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

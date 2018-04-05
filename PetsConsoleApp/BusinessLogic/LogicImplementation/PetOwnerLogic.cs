@@ -47,7 +47,7 @@ namespace PetsConsoleApp.BusinessLogic.LogicImplementation
             }
             catch (Exception exception)
             {
-                throw new Exception($"Unable to list of pet owners. See inner exception for details.", exception);
+                throw new Exception($"Unable to get list of pet owners. See inner exception for details.", exception);
             }
         }
     }

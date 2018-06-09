@@ -1,6 +1,6 @@
 Pets Console App
 ----------------
-Version: 0.1.0
+Version: 0.1.1
 
 Pets console app is a C# console application to demonstrate consuming an external API, producing list of pet names sorted alphabetically and grouped by pet's owner's gender.
 

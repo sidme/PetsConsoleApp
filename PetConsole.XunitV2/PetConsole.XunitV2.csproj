@@ -70,6 +70,7 @@
   <ItemGroup>
     <Compile Include="UnitTestApiClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitTestPetOwnerLogic.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
